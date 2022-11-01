@@ -1,0 +1,10 @@
+<h2>Login Now!</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div *ngFor="let formField of formFields" style="margin: 1em 0">
+      <label>{{formField.fieldName}} : </label>
+      <input type="{{formField.fieldType}}" value ="{{formField.fieldName}}"
+      [required]="formField.required"  formControlName = "{{formField.fieldName}}">
+      <br>
+    </div>
+    <button type ="submit" [disabled]="this.form.invalid">Submit</button>
+  </form>

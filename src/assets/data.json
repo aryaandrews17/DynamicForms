@@ -1,0 +1,13 @@
+[
+    {
+        "fieldName": "Username",
+        "fieldType": "text",
+        "validator": ["required"]
+    },
+    {
+        "fieldName": "Email",
+        "fieldType": "email",
+       
+        "validator": ["email","required"]
+    }
+]
